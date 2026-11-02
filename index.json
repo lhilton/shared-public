@@ -1,0 +1,125 @@
+{
+  "generated": "2026-10-27T16:58:54Z",
+  "commit": "772661e",
+  "config": {
+    "exclude": [
+      ".git",
+      "lumion",
+      ".gitignore",
+      "index.json",
+      "personal/uproar-tutorial/private-drafts",
+      "index.html"
+    ]
+  },
+  "count": 18,
+  "files": [
+    {
+      "path": "CNAME",
+      "bytes": 19,
+      "ext": "misc",
+      "date": null
+    },
+    {
+      "path": "cookbook/brown-butter-banana-bread/banana-bread-v5.png",
+      "bytes": 398578,
+      "ext": "png",
+      "date": null
+    },
+    {
+      "path": "cookbook/brown-butter-banana-bread/index.html",
+      "bytes": 23075,
+      "ext": "html",
+      "date": null
+    },
+    {
+      "path": "cookbook/creme-brulee/creme-brulee-card.png",
+      "bytes": 394908,
+      "ext": "png",
+      "date": null
+    },
+    {
+      "path": "cookbook/creme-brulee/index.html",
+      "bytes": 26049,
+      "ext": "html",
+      "date": null
+    },
+    {
+      "path": "cookbook/hearty-oat-wheat-loaf/hearty-oat-wheat-loaf-card.png",
+      "bytes": 792426,
+      "ext": "png",
+      "date": null
+    },
+    {
+      "path": "cookbook/hearty-oat-wheat-loaf/index.html",
+      "bytes": 33975,
+      "ext": "html",
+      "date": null
+    },
+    {
+      "path": "cookbook/index.html",
+      "bytes": 15138,
+      "ext": "html",
+      "date": null
+    },
+    {
+      "path": "cookbook/index.json",
+      "bytes": 1903,
+      "ext": "json",
+      "date": null
+    },
+    {
+      "path": "cookbook/peanut-butter-cookies/card.png",
+      "bytes": 287595,
+      "ext": "png",
+      "date": null
+    },
+    {
+      "path": "cookbook/peanut-butter-cookies/index.html",
+      "bytes": 16512,
+      "ext": "html",
+      "date": null
+    },
+    {
+      "path": "personal/2026/october/25/vonnegut-envelope/index.html",
+      "bytes": 5218,
+      "ext": "html",
+      "date": "2026-10-25"
+    },
+    {
+      "path": "personal/2026/october/25/vonnegut-envelope/quote.pdf",
+      "bytes": 34057,
+      "ext": "pdf",
+      "date": "2026-10-25"
+    },
+    {
+      "path": "personal/uproar-tutorial/index.html",
+      "bytes": 40733,
+      "ext": "html",
+      "date": null
+    },
+    {
+      "path": "personal/uproar-tutorial/uproar-ch1-prototype.html",
+      "bytes": 123778,
+      "ext": "html",
+      "date": null
+    },
+    {
+      "path": "personal/uproar-tutorial/uproar-ch2-bringing-down-the-house.html",
+      "bytes": 41179,
+      "ext": "html",
+      "date": null
+    },
+    {
+      "path": "personal/uproar-tutorial/uproar-ch3-going-to-pieces.html",
+      "bytes": 56248,
+      "ext": "html",
+      "date": null
+    },
+    {
+      "path": "personal/uproar-tutorial/uproar-guide-meshy-gorilla.html",
+      "bytes": 71571,
+      "ext": "html",
+      "date": null
+    }
+  ]
+}

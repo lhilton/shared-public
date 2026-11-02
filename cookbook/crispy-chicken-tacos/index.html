@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Crispy Baked Chicken Tacos — step by step</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,900;1,9..144,500&family=Hanken+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --crumb:   #FBF3E2;
+    --crumb-2: #F2E6C9;
+    --accent:  #D9A441;   /* toasted tortilla gold */
+    --accent-d:#A9761F;
+    --second:  #5B8C46;   /* salsa verde green */
+    --second-d:#3F6A2E;
+    --warn:    #C0405B;
+    --warn-d:  #9C2F46;
+    --ink:     #40321F;
+    --ink-soft:#6A5742;
+    --line:    #E2CFA4;
+    --maxw: 820px;
+    --shadow: 0 1px 2px rgba(64,50,31,.06), 0 14px 34px -18px rgba(64,50,31,.32);
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0;
+    background:
+      radial-gradient(120% 80% at 85% -10%, color-mix(in srgb, var(--accent) 18%, white) 0%, transparent 50%),
+      var(--crumb);
+    color:var(--ink);
+    font-family:"Hanken Grotesk", system-ui, -apple-system, sans-serif;
+    font-size:17px; line-height:1.62; -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:var(--maxw); margin:0 auto; padding:0 22px}
+  h1,h2,h3{font-family:"Fraunces", Georgia, serif; font-weight:900; line-height:1.06; letter-spacing:-.01em}
+  a{color:var(--second-d)}
+
+  .eyebrow{font-weight:700; text-transform:uppercase; letter-spacing:.22em; font-size:.74rem; color:var(--accent-d)}
+
+  .hero{padding:52px 0 26px; text-align:center}
+  .hero h1{font-size:clamp(2.1rem,5.6vw,3.3rem); margin:.1em 0 .14em}
+  .hero h1 .it{font-style:italic;font-weight:500;color:var(--second-d)}
+  .hero p.lede{font-size:1.1rem; color:var(--ink-soft); max-width:50ch; margin:6px auto 0}
+  .pill-row{display:flex; gap:10px; justify-content:center; flex-wrap:wrap; margin-top:22px}
+  .pill{display:inline-flex; align-items:center; gap:8px; background:#fff8ea; border:1px solid var(--line); border-radius:999px; padding:8px 15px; font-size:.86rem; font-weight:600; color:var(--ink-soft); box-shadow:var(--shadow)}
+  .pill b{color:var(--ink)}
+
+  .heroimg{margin-top:22px; border-radius:18px; overflow:hidden; box-shadow:var(--shadow); border:1px solid var(--line)}
+  .heroimg img{display:block; width:100%; height:auto}
+
+  .phonecard{background:#fff8ea; border:1px solid var(--line); border-radius:18px;
+    box-shadow:var(--shadow); padding:24px; text-align:center; margin-top:18px}
+  .phonecard img{width:min(320px,80vw); border-radius:28px; box-shadow:0 18px 40px -18px rgba(64,50,31,.45)}
+  .phonecard p{font-size:.9rem; color:var(--ink-soft); margin:10px 0 0}
+
+  section{padding:26px 0}
+  .num-eyebrow{display:flex; align-items:center; gap:12px; margin:0 0 16px}
+  .num-eyebrow .n{
+    width:40px;height:40px;border-radius:12px;flex:none;display:grid;place-items:center;
+    font-family:"Fraunces",serif;font-weight:900;font-size:1.15rem;color:#fff;
+    background:var(--second); box-shadow:0 8px 16px -8px color-mix(in srgb, var(--second-d) 70%, transparent);
+  }
+  .num-eyebrow h2{font-size:clamp(1.5rem,3.4vw,2.1rem); margin:0}
+  .panel{background:#fff8ea; border:1px solid var(--line); border-radius:18px; box-shadow:var(--shadow); padding:24px}
+
+  .two{display:grid; gap:18px}
+  @media(min-width:620px){.two{grid-template-columns:1fr 1fr}}
+  .card{background:#fffaf0; border:1px solid var(--line); border-radius:16px; box-shadow:var(--shadow); padding:20px 22px}
+  .card h3{font-size:1.18rem; margin:0 0 4px}
+  .card .sub{font-size:.84rem; color:var(--ink-soft); margin:0 0 14px}
+  ul.list{list-style:none; margin:0; padding:0}
+  ul.list li{display:flex; justify-content:space-between; gap:14px; padding:8px 0; border-bottom:1px dashed var(--line)}
+  ul.list li:last-child{border-bottom:0}
+  ul.list .amt{font-weight:700; white-space:nowrap; font-variant-numeric:tabular-nums; color:var(--accent-d); text-align:right}
+  ul.list .amt .gram{display:block; font-weight:800; font-size:1rem; color:var(--second-d)}
+  .weightnote{background:#EEF3E6; border:1px solid #D2E0C2; border-radius:10px; padding:11px 13px; font-size:.9rem; color:var(--ink-soft); margin:0 0 14px}
+  .weightnote b{color:var(--second-d)}
+  .variant{background:var(--crumb-2); border:1px dashed var(--accent); border-radius:10px; padding:12px 14px; font-size:.9rem; margin-top:14px}
+  .variant b{color:var(--accent-d)}
+  ul.tools{list-style:none;margin:0;padding:0}
+  ul.tools li{padding:7px 0 7px 26px; position:relative; border-bottom:1px dashed var(--line)}
+  ul.tools li:last-child{border-bottom:0}
+  ul.tools li::before{content:"✓"; position:absolute; left:0; top:7px; color:var(--second-d); font-weight:800}
+
+  ol.steps{list-style:none; counter-reset:s; margin:0; padding:0; display:grid; gap:16px}
+  ol.steps > li{
+    counter-increment:s; position:relative; padding:18px 20px 18px 64px;
+    background:#fffaf0; border:1px solid var(--line); border-radius:14px; box-shadow:var(--shadow);
+  }
+  ol.steps > li::before{
+    content:counter(s); position:absolute; left:16px; top:16px;
+    width:34px;height:34px;border-radius:50%; display:grid; place-items:center;
+    font-family:"Fraunces",serif; font-weight:900; font-size:1rem; color:#fff;
+    background:var(--accent); box-shadow:0 5px 12px -5px color-mix(in srgb, var(--accent-d) 80%, transparent);
+  }
+  ol.steps > li h4{margin:0 0 6px; font-family:"Hanken Grotesk",sans-serif; font-weight:800; font-size:1.04rem}
+  ol.steps > li p{margin:0 0 8px}
+  ol.steps > li p:last-child{margin-bottom:0}
+  .expect{font-size:.92rem; color:var(--ink-soft); background:#F3F7EC; border:1px solid #D9E7C9; border-radius:9px; padding:9px 12px; margin-top:8px}
+  .expect b{color:var(--second-d)}
+  .stop{font-size:.93rem; background:linear-gradient(90deg,rgba(192,64,91,.09),transparent 70%); border-left:4px solid var(--warn); border-radius:8px; padding:9px 12px; margin-top:8px}
+  .stop b{color:var(--warn-d)}
+  .flag{font-size:.93rem; background:linear-gradient(90deg,rgba(217,164,65,.18),transparent 75%); border-left:4px solid var(--accent); border-radius:8px; padding:9px 12px; margin-top:8px}
+  .flag b{color:var(--accent-d)}
+
+  code{background:var(--crumb-2); border:1px solid var(--line); border-radius:6px; padding:1px 7px; font-size:.92em; font-weight:600; white-space:nowrap}
+  b.key{color:var(--ink)}
+
+  .settings{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}
+  .chip{display:inline-flex;align-items:center;gap:6px;background:#fff;border:1px solid var(--line);border-radius:999px;padding:7px 13px;font-size:.86rem;font-weight:600}
+  .chip b{color:var(--second-d)}
+
+  .fix{display:grid;gap:12px}
+  @media(min-width:620px){.fix{grid-template-columns:1fr 1fr}}
+  .fix .it{background:var(--crumb-2);border:1px solid var(--line);border-radius:12px;padding:15px}
+  .fix .it h4{margin:0 0 5px;font-family:"Fraunces",serif;font-size:1.05rem}
+  .fix .it p{margin:0;font-size:.93rem;color:var(--ink-soft)}
+
+  footer{padding:34px 0 56px;color:var(--ink-soft);font-size:.85rem}
+  footer .rule{height:1px;background:var(--line);margin-bottom:20px}
+  footer b{color:var(--ink)}
+  :focus-visible{outline:3px solid var(--accent); outline-offset:3px; border-radius:6px}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <span class="eyebrow">From Allrecipes · via TikTok</span>
+    <h1>Crispy Baked Chicken Tacos <span class="it">salsa verde</span></h1>
+    <p class="lede">Seasoned chicken and pinto beans in a creamy green sauce, folded into buttered tortillas with cheese and baked until the tops crunch. Makes 8 tacos — dinner for 4.</p>
+    <div class="pill-row">
+      <span class="pill">🌮 <span>Serves <b>4</b></span></span>
+      <span class="pill">⏱ <span>About <b>45 min</b></span></span>
+      <span class="pill">🔥 <span>Bakes at <b>375°F</b></span></span>
+    </div>
+    <div class="heroimg"><img src="hero.png" alt="Crispy baked chicken tacos standing in a glass baking dish, golden toasted tops with melted cheese"></div>
+    <div class="phonecard">
+      <a href="card.png"><img src="card.png" alt="Phone recipe card"></a>
+      <p>📱 For your phone — tap to open the full-size card, then save it to Photos.</p>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <div class="num-eyebrow"><span class="n">1</span><h2>What you need</h2></div>
+    <div class="two">
+      <div class="card">
+        <h3>Ingredients</h3>
+        <p class="sub">For 8 tacos. Grams lead; volume in the small line.</p>
+        <p class="weightnote"><b>Weigh if you can.</b> Set the bowl on the scale, tare between ingredients, go by grams.</p>
+        <ul class="list">
+          <li><span>Chicken breast, boneless skinless, cut in ¾-inch pieces</span><span class="amt"><span class="gram">454 g</span>1 lb</span></li>
+          <li><span>Green enchilada sauce or tomatillo salsa, divided</span><span class="amt"><span class="gram">240 g</span>1 cup</span></li>
+          <li><span>Pinto beans, drained</span><span class="amt"><span class="gram">240 g</span>1 can (15 oz)</span></li>
+          <li><span>Monterey Jack, shredded, divided</span><span class="amt"><span class="gram">250 g</span>2½ cups</span></li>
+          <li><span>Sour cream</span><span class="amt"><span class="gram">115 g</span>½ cup</span></li>
+          <li><span>Onion, finely chopped</span><span class="amt"><span class="gram">113 g</span>½ cup (~½ medium)</span></li>
+          <li><span>Olive oil</span><span class="amt"><span class="gram">20 g</span>1½ Tbsp</span></li>
+          <li><span>Butter, melted</span><span class="amt"><span class="gram">28 g</span>2 Tbsp</span></li>
+          <li><span>Flour tortillas, 6-inch</span><span class="amt"><span class="gram">8</span>~30 g each</span></li>
+          <li><span>Garlic powder</span><span class="amt">1 tsp</span></li>
+          <li><span>Kosher salt</span><span class="amt">1 tsp</span></li>
+          <li><span>Black pepper</span><span class="amt">½ tsp</span></li>
+          <li><span>Chili powder</span><span class="amt">¾ tsp</span></li>
+          <li><span>Ground cumin</span><span class="amt">½ tsp</span></li>
+          <li><span>Shredded lettuce + toppings, to serve</span><span class="amt">—</span></li>
+        </ul>
+        <div class="variant"><b>Swaps:</b> rotisserie chicken works — skip the seasoning/browning and go straight to the salsa step with ~454 g shredded meat. Tomatillo salsa verde is the greener, tangier choice; red enchilada sauce works fine too.</div>
+      </div>
+      <div class="card">
+        <h3>Equipment</h3>
+        <ul class="tools">
+          <li>Large skillet</li>
+          <li>11 × 7-inch baking dish (a 9×9 or 7×11 works)</li>
+          <li>Pastry brush</li>
+          <li>Scale + mixing bowl</li>
+          <li>Small bowl for the sour cream sauce</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="num-eyebrow"><span class="n">2</span><h2>Build the filling</h2></div>
+    <ol class="steps">
+      <li>
+        <h4>Preheat the oven to 375°F.</h4>
+        <p>Do it first — the filling comes together fast and you want the oven ready.</p>
+      </li>
+      <li>
+        <h4>Season the chicken.</h4>
+        <p>Pat <code>454 g (1 lb)</code> chicken pieces dry, then toss with garlic powder, <code>1 tsp</code> salt, <code>½ tsp</code> pepper, <code>¾ tsp</code> chili powder and <code>½ tsp</code> cumin. Coat well.</p>
+      </li>
+      <li>
+        <h4>Brown the chicken.</h4>
+        <p>Heat <code>20 g (1½ Tbsp)</code> olive oil in a large skillet over medium-high. Add the chicken in a single layer and cook <b class="key">undisturbed 3–4 min</b> until browned and it releases from the pan easily.</p>
+        <p class="stop"><b>Don't stir early.</b> Moving it before the crust sets steams the meat instead of browning it — that's where the flavor lives.</p>
+      </li>
+      <li>
+        <h4>Add onion, cook 3 more minutes.</h4>
+        <p>Stir in <code>113 g (½ cup)</code> chopped onion and cook, stirring occasionally.</p>
+        <p class="expect"><b>What to expect:</b> onion softens and edges of the chicken look golden.</p>
+      </li>
+      <li>
+        <h4>Add salsa and beans, simmer until creamy.</h4>
+        <p>Stir in <code>160 g (⅔ cup)</code> of the salsa and the drained beans. Reduce heat slightly and simmer <b class="key">~5 min</b>, stirring occasionally, until slightly thickened and creamy. Reserve the remaining <code>80 g (⅓ cup)</code> salsa for the sauce.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="num-eyebrow"><span class="n">3</span><h2>Assemble the tacos</h2></div>
+    <ol class="steps">
+      <li>
+        <h4>Butter the pan.</h4>
+        <p>Brush the sides and bottom of an 11×7 baking dish with some of the <code>28 g (2 Tbsp)</code> melted butter.</p>
+      </li>
+      <li>
+        <h4>Fill and fold, one tortilla at a time.</h4>
+        <p>Brush one side of each tortilla with remaining butter. Lay it in the dish, add <code>~15 g</code> cheese on the bottom, <code>~⅓ cup</code> filling, then a couple more tablespoons of cheese. Fold the tortilla up like a taco and press it against the pan edge.</p>
+        <p class="flag"><b>Lean them on each other.</b> The folded tacos support each other against the pan walls — that's what keeps them upright in the oven.</p>
+      </li>
+      <li>
+        <h4>Top with the rest of the cheese.</h4>
+        <p>Sprinkle any remaining cheese over the tops of all the tacos.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="num-eyebrow"><span class="n">4</span><h2>Bake and serve</h2></div>
+    <ol class="steps">
+      <li>
+        <h4>Bake 20–25 min at 375°F.</h4>
+        <p>Until the tortilla tops are golden brown and toasted and the cheese is melted and bubbly.</p>
+        <p class="expect"><b>What to expect:</b> the standing tortillas crisp up, edges darken, cheese browns in spots.</p>
+      </li>
+      <li>
+        <h4>Stir the sauce while it bakes.</h4>
+        <p>Mix the reserved <code>80 g (⅓ cup)</code> salsa into <code>115 g (½ cup)</code> sour cream.</p>
+      </li>
+      <li>
+        <h4>Top with lettuce and sauce just before serving.</h4>
+        <p>Lettuce goes on last so it stays crisp. Serve with the sour cream sauce on top or on the side.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="panel">
+      <h3 style="margin:0 0 10px">Keeping it</h3>
+      <div class="settings">
+        <span class="chip">Fridge <b>3–4 days</b>, covered</span>
+        <span class="chip">Re-crisp <b>400°F oven ~10 min</b></span>
+        <span class="chip">Air fryer <b>~5 min at 375°F</b></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="num-eyebrow"><span class="n" style="background:var(--warn)">?</span><h2>If something went wrong</h2></div>
+    <div class="fix">
+      <div class="it"><h4>Tortillas came out soggy</h4><p>The filling was too wet — simmer longer next time until it visibly thickens, and don't skip brushing the tortillas with butter.</p></div>
+      <div class="it"><h4>Tacos flopped over in the oven</h4><p>Pack them snug against each other and the pan walls, fold-side down against the edge. A smaller dish holds them tighter.</p></div>
+      <div class="it"><h4>Cheese browned but tortillas still pale</h4><p>Rack was too high or the dish was foil-covered — bake uncovered on the middle rack.</p></div>
+      <div class="it"><h4>Chicken rubbery</h4><p>Pieces were too big or over-simmered. Keep them at ¾ inch and pull the skillet as soon as the filling thickens.</p></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="rule"></div>
+    <p style="max-width:74ch"><b>Source:</b> <a href="https://www.tiktok.com/@allrecipes/video/7703233780550536461">Allrecipes on TikTok</a> (@allrecipes, video 7703233780550536461) — recipe inspiration from @iramsfoodstory. Converted to weight-first format; no other changes.</p>
+  </div>
+</footer>
+
+</body>
+</html>

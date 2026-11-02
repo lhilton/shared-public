@@ -1,0 +1,92 @@
+{
+  "generated": "2026-11-02T00:53:57Z",
+  "commit": "523f167",
+  "count": 7,
+  "recipes": [
+    {
+      "slug": "crispy-chicken-tacos",
+      "name": "Crispy Baked Chicken Tacos salsa verde",
+      "dir": "cookbook/crispy-chicken-tacos",
+      "page": "cookbook/crispy-chicken-tacos/index.html",
+      "card": "cookbook/crispy-chicken-tacos/card.png",
+      "bytes": {
+        "cookbook/crispy-chicken-tacos/card.png": 358114,
+        "cookbook/crispy-chicken-tacos/hero.png": 1136846,
+        "cookbook/crispy-chicken-tacos/index.html": 16319
+      },
+      "added": "2026-11-01"
+    },
+    {
+      "slug": "chicken-au-gratin-crockpot",
+      "name": "Chicken & Au Gratin Roast",
+      "dir": "cookbook/chicken-au-gratin-crockpot",
+      "page": "cookbook/chicken-au-gratin-crockpot/index.html",
+      "card": "cookbook/chicken-au-gratin-crockpot/chicken-au-gratin-crockpot-card.png",
+      "bytes": {
+        "cookbook/chicken-au-gratin-crockpot/chicken-au-gratin-crockpot-card.png": 360486,
+        "cookbook/chicken-au-gratin-crockpot/index.html": 18203
+      },
+      "added": "2026-10-30"
+    },
+    {
+      "slug": "lunch-lady-bars",
+      "name": "Lunch Lady Bars no oven required",
+      "dir": "cookbook/lunch-lady-bars",
+      "page": "cookbook/lunch-lady-bars/index.html",
+      "card": "cookbook/lunch-lady-bars/card.png",
+      "bytes": {
+        "cookbook/lunch-lady-bars/card.png": 284873,
+        "cookbook/lunch-lady-bars/index.html": 17855
+      },
+      "added": "2026-10-29"
+    },
+    {
+      "slug": "peanut-butter-cookies",
+      "name": "Peanut Butter Cookies the classic",
+      "dir": "cookbook/peanut-butter-cookies",
+      "page": "cookbook/peanut-butter-cookies/index.html",
+      "card": "cookbook/peanut-butter-cookies/card.png",
+      "bytes": {
+        "cookbook/peanut-butter-cookies/card.png": 287595,
+        "cookbook/peanut-butter-cookies/index.html": 17790
+      },
+      "added": "2026-10-27"
+    },
+    {
+      "slug": "brown-butter-banana-bread",
+      "name": "Brown Butter Chocolate Chip Banana Bread",
+      "dir": "cookbook/brown-butter-banana-bread",
+      "page": "cookbook/brown-butter-banana-bread/index.html",
+      "card": "cookbook/brown-butter-banana-bread/banana-bread-v5.png",
+      "bytes": {
+        "cookbook/brown-butter-banana-bread/banana-bread-v5.png": 398578,
+        "cookbook/brown-butter-banana-bread/index.html": 23075
+      },
+      "added": "2026-10-23"
+    },
+    {
+      "slug": "creme-brulee",
+      "name": "Cr\u00e8me Br\u00fbl\u00e9e",
+      "dir": "cookbook/creme-brulee",
+      "page": "cookbook/creme-brulee/index.html",
+      "card": "cookbook/creme-brulee/creme-brulee-card.png",
+      "bytes": {
+        "cookbook/creme-brulee/creme-brulee-card.png": 394908,
+        "cookbook/creme-brulee/index.html": 26049
+      },
+      "added": "2026-10-23"
+    },
+    {
+      "slug": "hearty-oat-wheat-loaf",
+      "name": "Hearty Oat & Wheat Loaf",
+      "dir": "cookbook/hearty-oat-wheat-loaf",
+      "page": "cookbook/hearty-oat-wheat-loaf/index.html",
+      "card": "cookbook/hearty-oat-wheat-loaf/hearty-oat-wheat-loaf-card.png",
+      "bytes": {
+        "cookbook/hearty-oat-wheat-loaf/hearty-oat-wheat-loaf-card.png": 792426,
+        "cookbook/hearty-oat-wheat-loaf/index.html": 33975
+      },
+      "added": "2026-10-23"
+    }
+  ]
+}
