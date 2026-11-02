@@ -1,6 +1,6 @@
 {
-  "generated": "2026-10-27T16:58:54Z",
-  "commit": "772661e",
+  "generated": "2026-11-02T16:09:19Z",
+  "commit": "c3e427a",
   "config": {
     "exclude": [
       ".git",
@@ -11,14 +11,8 @@
       "index.html"
     ]
   },
-  "count": 18,
+  "count": 24,
   "files": [
-    {
-      "path": "CNAME",
-      "bytes": 19,
-      "ext": "misc",
-      "date": null
-    },
     {
       "path": "cookbook/brown-butter-banana-bread/banana-bread-v5.png",
       "bytes": 398578,
@@ -32,6 +26,18 @@
       "date": null
     },
     {
+      "path": "cookbook/chicken-au-gratin-crockpot/chicken-au-gratin-crockpot-card.png",
+      "bytes": 360486,
+      "ext": "png",
+      "date": null
+    },
+    {
+      "path": "cookbook/chicken-au-gratin-crockpot/index.html",
+      "bytes": 18203,
+      "ext": "html",
+      "date": null
+    },
+    {
       "path": "cookbook/creme-brulee/creme-brulee-card.png",
       "bytes": 394908,
       "ext": "png",
@@ -40,6 +46,24 @@
     {
       "path": "cookbook/creme-brulee/index.html",
       "bytes": 26049,
+      "ext": "html",
+      "date": null
+    },
+    {
+      "path": "cookbook/crispy-chicken-tacos/card.png",
+      "bytes": 358114,
+      "ext": "png",
+      "date": null
+    },
+    {
+      "path": "cookbook/crispy-chicken-tacos/hero.png",
+      "bytes": 1136846,
+      "ext": "png",
+      "date": null
+    },
+    {
+      "path": "cookbook/crispy-chicken-tacos/index.html",
+      "bytes": 16319,
       "ext": "html",
       "date": null
     },
@@ -63,8 +87,20 @@
     },
     {
       "path": "cookbook/index.json",
-      "bytes": 1903,
+      "bytes": 3314,
       "ext": "json",
+      "date": null
+    },
+    {
+      "path": "cookbook/lunch-lady-bars/card.png",
+      "bytes": 284873,
+      "ext": "png",
+      "date": null
+    },
+    {
+      "path": "cookbook/lunch-lady-bars/index.html",
+      "bytes": 17855,
+      "ext": "html",
       "date": null
     },
     {
@@ -75,7 +111,7 @@
     },
     {
       "path": "cookbook/peanut-butter-cookies/index.html",
-      "bytes": 16512,
+      "bytes": 17790,
       "ext": "html",
       "date": null
     },
