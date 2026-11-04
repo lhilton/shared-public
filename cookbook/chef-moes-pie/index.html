@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chef Moe's Pie — half-meat, half-bean cottage pie</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,900;1,9..144,500&family=Hanken+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --crumb:   #FBF3E2;
+    --crumb-2: #F2E6C9;
+    --accent:  #8A3324;
+    --accent-d:#6E2418;
+    --second:  #6E8C4E;
+    --second-d:#4E6A34;
+    --warn:    #C0405B;
+    --warn-d:  #9C2F46;
+    --ink:     #40321F;
+    --ink-soft:#6A5742;
+    --line:    #E2CFA4;
+    --maxw: 820px;
+    --shadow: 0 1px 2px rgba(64,50,31,.06), 0 14px 34px -18px rgba(64,50,31,.32);
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0;
+    background:
+      radial-gradient(120% 80% at 85% -10%, color-mix(in srgb, var(--accent) 14%, white) 0%, transparent 50%),
+      var(--crumb);
+    color:var(--ink);
+    font-family:"Hanken Grotesk", system-ui, -apple-system, sans-serif;
+    font-size:17px; line-height:1.62; -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:var(--maxw); margin:0 auto; padding:0 22px}
+  h1,h2,h3{font-family:"Fraunces", Georgia, serif; font-weight:900; line-height:1.06; letter-spacing:-.01em}
+  a{color:var(--second-d)}
+
+  .eyebrow{font-weight:700; text-transform:uppercase; letter-spacing:.22em; font-size:.74rem; color:var(--accent-d)}
+
+  .hero{padding:52px 0 26px; text-align:center}
+  .hero h1{font-size:clamp(2.1rem,5.6vw,3.3rem); margin:.1em 0 .14em}
+  .hero h1 .it{font-style:italic;font-weight:500;color:var(--second-d)}
+  .hero p.lede{font-size:1.1rem; color:var(--ink-soft); max-width:50ch; margin:6px auto 0}
+  .pill-row{display:flex; gap:10px; justify-content:center; flex-wrap:wrap; margin-top:22px}
+  .pill{display:inline-flex; align-items:center; gap:8px; background:#fff8ea; border:1px solid var(--line); border-radius:999px; padding:8px 15px; font-size:.86rem; font-weight:600; color:var(--ink-soft); box-shadow:var(--shadow)}
+  .pill b{color:var(--ink)}
+
+  .phonecard{background:#fff8ea; border:1px solid var(--line); border-radius:18px;
+    box-shadow:var(--shadow); padding:24px; text-align:center; margin-top:18px}
+  .phonecard img{width:min(320px,80vw); border-radius:28px; box-shadow:0 18px 40px -18px rgba(64,50,31,.45)}
+  .phonecard p{font-size:.9rem; color:var(--ink-soft); margin:10px 0 0}
+
+  section{padding:26px 0}
+  .num-eyebrow{display:flex; align-items:center; gap:12px; margin:0 0 16px}
+  .num-eyebrow .n{
+    width:40px;height:40px;border-radius:12px;flex:none;display:grid;place-items:center;
+    font-family:"Fraunces",serif;font-weight:900;font-size:1.15rem;color:#fff;
+    background:var(--second); box-shadow:0 8px 16px -8px color-mix(in srgb, var(--second-d) 70%, transparent);
+  }
+  .num-eyebrow h2{font-size:clamp(1.5rem,3.4vw,2.1rem); margin:0}
+  .panel{background:#fff8ea; border:1px solid var(--line); border-radius:18px; box-shadow:var(--shadow); padding:24px}
+
+  .about{
+    background:linear-gradient(180deg,var(--crumb-2),#FFFBF2);
+    border:1px solid var(--line); border-left:5px solid var(--accent);
+    border-radius:16px; box-shadow:var(--shadow); padding:22px 24px; margin-top:8px;
+  }
+  .about h2{font-size:1.35rem; margin:0 0 6px}
+  .about ul{margin:12px 0 0; padding:0; list-style:none; display:grid; gap:10px}
+  .about li{position:relative; padding-left:26px; font-size:.97rem}
+  .about li::before{content:"🫘"; position:absolute; left:0; top:0; font-size:.9rem}
+  .about b{color:var(--accent-d)}
+
+  .lab{display:inline-block; font-weight:800; font-size:.7rem; letter-spacing:.12em; text-transform:uppercase; padding:2px 9px; border-radius:6px; margin-right:8px; vertical-align:2px}
+  .lab.do{background:var(--second); color:#fff}
+  .lab.note{background:var(--crumb-2); color:var(--accent-d); border:1px solid var(--line)}
+  .lab.warn{background:var(--warn); color:#fff}
+  .lab.see{background:#EAF0E0; color:var(--ink); border:1px solid #CFDDBC}
+
+  .two{display:grid; gap:18px}
+  @media(min-width:620px){.two{grid-template-columns:1fr 1fr}}
+  .card{background:#fffaf0; border:1px solid var(--line); border-radius:16px; box-shadow:var(--shadow); padding:20px 22px}
+  .card h3{font-size:1.18rem; margin:0 0 4px}
+  .card .sub{font-size:.84rem; color:var(--ink-soft); margin:0 0 14px}
+  ul.list{list-style:none; margin:0; padding:0}
+  ul.list li{display:flex; justify-content:space-between; gap:14px; padding:8px 0; border-bottom:1px dashed var(--line)}
+  ul.list li:last-child{border-bottom:0}
+  ul.list .amt{font-weight:700; white-space:nowrap; font-variant-numeric:tabular-nums; color:var(--accent-d); text-align:right}
+  ul.list .amt .gram{display:block; font-weight:800; font-size:1rem; color:var(--second-d)}
+  .weightnote{background:#EEF3E6; border:1px solid #D2E0C2; border-radius:10px; padding:11px 13px; font-size:.9rem; color:var(--ink-soft); margin:0 0 14px}
+  .weightnote b{color:var(--second-d)}
+  .variant{background:var(--crumb-2); border:1px dashed var(--accent); border-radius:10px; padding:12px 14px; font-size:.9rem; margin-top:14px}
+  .variant b{color:var(--accent-d)}
+  ul.tools{list-style:none;margin:0;padding:0}
+  ul.tools li{padding:7px 0 7px 26px; position:relative; border-bottom:1px dashed var(--line)}
+  ul.tools li:last-child{border-bottom:0}
+  ul.tools li::before{content:"✓"; position:absolute; left:0; top:7px; color:var(--second-d); font-weight:800}
+
+  ol.steps{list-style:none; counter-reset:s; margin:0; padding:0; display:grid; gap:16px}
+  ol.steps > li{
+    counter-increment:s; position:relative; padding:18px 20px 18px 64px;
+    background:#fffaf0; border:1px solid var(--line); border-radius:14px; box-shadow:var(--shadow);
+  }
+  ol.steps > li::before{
+    content:counter(s); position:absolute; left:16px; top:16px;
+    width:34px;height:34px;border-radius:50%; display:grid; place-items:center;
+    font-family:"Fraunces",serif; font-weight:900; font-size:1rem; color:#fff;
+    background:var(--accent); box-shadow:0 5px 12px -5px color-mix(in srgb, var(--accent-d) 80%, transparent);
+  }
+  ol.steps > li h4{margin:0 0 6px; font-family:"Hanken Grotesk",sans-serif; font-weight:800; font-size:1.04rem}
+  ol.steps > li p{margin:0 0 8px}
+  ol.steps > li p:last-child{margin-bottom:0}
+  .expect{font-size:.92rem; color:var(--ink-soft); background:#F3F7EC; border:1px solid #D9E7C9; border-radius:9px; padding:9px 12px; margin-top:8px}
+  .expect b{color:var(--second-d)}
+  .stop{font-size:.93rem; background:linear-gradient(90deg,rgba(192,64,91,.09),transparent 70%); border-left:4px solid var(--warn); border-radius:8px; padding:9px 12px; margin-top:8px}
+  .stop b{color:var(--warn-d)}
+  .flag{font-size:.93rem; background:linear-gradient(90deg,rgba(138,51,36,.14),transparent 75%); border-left:4px solid var(--accent); border-radius:8px; padding:9px 12px; margin-top:8px}
+  .flag b{color:var(--accent-d)}
+
+  code{background:var(--crumb-2); border:1px solid var(--line); border-radius:6px; padding:1px 7px; font-size:.92em; font-weight:600}
+  b.key{color:var(--ink)}
+
+  .settings{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}
+  .chip{display:inline-flex;align-items:center;gap:6px;background:#fff;border:1px solid var(--line);border-radius:999px;padding:7px 13px;font-size:.86rem;font-weight:600}
+  .chip b{color:var(--second-d)}
+
+  .fix{display:grid;gap:12px}
+  @media(min-width:620px){.fix{grid-template-columns:1fr 1fr}}
+  .fix .it{background:var(--crumb-2);border:1px solid var(--line);border-radius:12px;padding:15px}
+  .fix .it h4{margin:0 0 5px;font-family:"Fraunces",serif;font-size:1.05rem}
+  .fix .it p{margin:0;font-size:.93rem;color:var(--ink-soft)}
+
+  footer{padding:34px 0 56px;color:var(--ink-soft);font-size:.85rem}
+  footer .rule{height:1px;background:var(--line);margin-bottom:20px}
+  footer b{color:var(--ink)}
+  :focus-visible{outline:3px solid var(--accent); outline-offset:3px; border-radius:6px}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <span class="eyebrow">Lee's original · bean version</span>
+    <h1>Chef Moe's Pie <span class="it">with beans</span></h1>
+    <p class="lede">A cottage pie that swaps half the meat for a 50/50 mix of red kidney and black beans. Sausage carries the flavor, tomato paste brings the depth, and the whole thing bakes in one 9x13 pan.</p>
+    <div class="pill-row">
+      <span class="pill">🥧 <span>One <b>9x13 pan</b>, serves 6</span></span>
+      <span class="pill">⏱ <span>About <b>45 minutes</b></span></span>
+      <span class="pill">🫘 <span><b>Half the meat</b>, same comfort</span></span>
+    </div>
+    <div class="phonecard">
+      <a href="card.png"><img src="card.png" alt="Phone recipe card for Chef Moe's Pie"></a>
+      <p>📱 For your phone — tap to open the full-size card, then save it to Photos.</p>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <div class="about">
+      <h2>Why this version works</h2>
+      <p style="margin:0;font-size:.97rem">Swapping a pound of meat for beans works, but beans are mild. They take on the flavor around them instead of adding their own, so the remaining pound of meat becomes the whole flavor engine. Three changes keep the pie from tasting flat:</p>
+      <ul>
+        <li><b>Sausage is the better carrier.</b> Its fat seasons the whole filling. Lean beef works too, but the sausage version tastes richer.</li>
+        <li><b>Tomato paste + Worcestershire replace the meaty depth.</b> Beans don't brown or render fat, so the umami has to come from somewhere. Two tablespoons of paste does most of the work.</li>
+        <li><b>Kidney + black is a real 50/50, not decoration.</b> Kidney beans are firmer and read "cottage pie." Black beans are creamier inside and hold their shape. Together they mimic the bite of ground meat better than either alone.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="num-eyebrow"><span class="n">1</span><h2>What you need</h2></div>
+    <div class="two">
+      <div class="card">
+        <h3>Ingredients</h3>
+        <p class="sub">For one 9x13 pan, serves 6. Grams lead; volume in the small line.</p>
+        <p class="weightnote"><b>Weigh if you can.</b> Set the bowl on the scale, tare between ingredients, go by grams.</p>
+        <ul class="list">
+          <li><span>Ground beef or sausage</span><span class="amt"><span class="gram">454 g</span>1 lb</span></li>
+          <li><span>Kidney beans, drained + rinsed</span><span class="amt"><span class="gram">255 g</span>1 can (15 oz)</span></li>
+          <li><span>Black beans, drained + rinsed</span><span class="amt"><span class="gram">260 g</span>1 can (15 oz)</span></li>
+          <li><span>Instant potato mix</span><span class="amt"><span class="gram">226 g</span>2 packets (4 oz)</span></li>
+          <li><span>Shredded cheese</span><span class="amt"><span class="gram">150 g</span>~1.5 cups</span></li>
+          <li><span>Carrots, diced</span><span class="amt"><span class="gram">256 g</span>2 cups</span></li>
+          <li><span>Celery, diced</span><span class="amt"><span class="gram">202 g</span>2 cups</span></li>
+          <li><span>Onion, diced</span><span class="amt"><span class="gram">160 g</span>½ large</span></li>
+          <li><span>Green beans, cut</span><span class="amt"><span class="gram">200 g</span>2 cups</span></li>
+          <li><span>Tomato paste</span><span class="amt"><span class="gram">32 g</span>2 Tbsp</span></li>
+          <li><span>Worcestershire sauce</span><span class="amt"><span class="gram">2 tsp</span>10 g, too small to weigh</span></li>
+        </ul>
+        <div class="variant"><b>Water or broth, a splash.</b> The beans bring no fat, so if the filling looks dry at the combine step, add a splash of broth or the bean-can liquid. Keep it loose.</div>
+      </div>
+      <div class="card">
+        <h3>Equipment</h3>
+        <ul class="tools">
+          <li>Large skillet</li>
+          <li>9x13 baking dish (deep)</li>
+          <li>Pot for the instant mash</li>
+          <li>Scale</li>
+          <li>Fork, for raking the potato top</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="num-eyebrow"><span class="n">2</span><h2>Build the filling</h2></div>
+    <ol class="steps">
+      <li>
+        <h4>Brown the meat</h4>
+        <p>Get a big skillet hot. Brown the <code>454 g (1 lb)</code> meat, breaking it up as it cooks, <b class="key">8–10 min</b>. Drain excess fat only if there's a lot; with sausage you want some left behind.</p>
+        <p class="expect"><b>What to expect:</b> dark brown bits stuck to the pan. That's flavor. Don't wash them out.</p>
+      </li>
+      <li>
+        <h4>Soften the vegetables</h4>
+        <p>Add the <code>256 g (2 cups)</code> carrots, <code>202 g (2 cups)</code> celery, and <code>160 g (½ large)</code> onion to the same pan. Cook <b class="key">5–7 min</b>, stirring now and then.</p>
+      </li>
+      <li>
+        <h4>Bloom the tomato paste</h4>
+        <p>Stir in <code>32 g (2 Tbsp)</code> tomato paste and <code>2 tsp</code> Worcestershire. Cook the paste for <b class="key">1 min</b>, pressing it into the hot pan.</p>
+        <p class="flag"><b>Why:</b> raw tomato paste tastes metallic. One minute in the hot pan turns it sweet and deep.</p>
+      </li>
+      <li>
+        <h4>Add the beans</h4>
+        <p>Stir in both beans — <code>255 g</code> kidney and <code>260 g</code> black, drained and rinsed. Fold gently so they keep their shape.</p>
+        <p class="stop"><b>Don't mash them.</b> Stirred roughly, the black beans break down and turn the filling gray and pasty. Fold, don't whip.</p>
+        <p class="expect"><b>What to expect:</b> the filling should look glossy and hold together, not swim in liquid. Too dry? Splash of broth or bean-can liquid. Too wet? Simmer 2–3 min uncovered.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="num-eyebrow"><span class="n">3</span><h2>Assemble and bake</h2></div>
+    <ol class="steps" start="5">
+      <li style="counter-increment:s">
+        <h4>Layer the pie</h4>
+        <p>Tip the filling into the <b class="key">9x13 dish</b> and spread it flat. Scatter <code>150 g (~1.5 cups)</code> shredded cheese over the filling. Spread the mashed potatoes (from the <code>226 g / 2 packets</code> of instant mix) on top, then rake the surface with a fork so there are peaks.</p>
+        <p class="expect"><b>What to expect:</b> the peaks are what catch the broiler's heat and brown. A flat top browns flat.</p>
+      </li>
+      <li style="counter-increment:s">
+        <h4>Bake, then broil</h4>
+        <p>Bake at <b class="key">350°F for 12 min</b>, then switch to <b class="key">broil on HIGH</b> until the potato tips start to brown, <b class="key">2–4 min</b>.</p>
+        <p class="stop"><b>Stay at the oven.</b> Broilers brown mash in under a minute and burn it in two. Watch through the door, rack in the upper position.</p>
+      </li>
+      <li style="counter-increment:s">
+        <h4>Rest, then serve</h4>
+        <p>Let the pie sit <b class="key">10 min</b> before cutting. The filling sets as it cools, so slices hold their shape instead of slumping on the plate.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="num-eyebrow"><span class="n" style="background:var(--accent)">✓</span><h2>Storage &amp; reheating</h2></div>
+    <div class="settings">
+      <span class="chip">🧊 <b>Fridge:</b> 4 days, covered</span>
+      <span class="chip">❄️ <b>Freezer:</b> slices, up to 2 months</span>
+      <span class="chip">🔥 <b>Oven reheat:</b> 350°F, 15–20 min</span>
+      <span class="chip">⚡ <b>Microwave:</b> ~2 min per slice</span>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="num-eyebrow"><span class="n" style="background:var(--warn)">?</span><h2>If something went wrong</h2></div>
+    <div class="fix">
+      <div class="it"><h4>Beans turned to mush</h4><p>They were stirred too hard or simmered too long. Next time, fold them in at the very end, after the filling is already built, and skip simmering.</p></div>
+      <div class="it"><h4>Filling tastes flat</h4><p>The meat wasn't seasoned enough to carry it. Add 1 tsp more Worcestershire and a good pinch of salt, or use sausage next time instead of lean beef.</p></div>
+      <div class="it"><h4>Potato top never browned</h4><p>The surface was raked flat or the rack was too low. Fork up real peaks and put the dish on the top rack before broiling.</p></div>
+      <div class="it"><h4>Potato top burned</h4><p>The broiler was left unattended past the 2–4 min window. Broil with the door open a crack so you can see the color change in real time.</p></div>
+      <div class="it"><h4>Filling is watery</h4><p>The beans or veg released liquid in the bake. Simmer the filling 2–3 min before assembling, or sprinkle 1 Tbsp flour in while it simmers.</p></div>
+      <div class="it"><h4>Cheese disappeared</h4><p>It slid under the potato layer. Sprinkle the cheese on the filling and press it lightly with the back of a spoon so it clings before the potatoes go on.</p></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="rule"></div>
+    <p style="max-width:74ch"><b>Source:</b> Lee's own recipe, the one he calls Chef Moe's Pie — a cottage pie built from whatever the pantry has. This version swaps 1 lb of the meat for a 50/50 mix of kidney and black beans, adds tomato paste and Worcestershire for depth, and keeps everything else exactly as the original: 12 minutes at 350°F, then broil on high until the potato tips brown.</p>
+  </div>
+</footer>
+
+</body>
+</html>
