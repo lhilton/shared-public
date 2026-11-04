@@ -1,6 +1,6 @@
 {
-  "generated": "2026-11-04T21:31:18Z",
-  "commit": "70ee496",
+  "generated": "2026-11-04T22:49:25Z",
+  "commit": "514e561",
   "count": 9,
   "recipes": [
     {
@@ -41,13 +41,14 @@
     },
     {
       "slug": "creme-brulee",
-      "name": "Cr\u00e8me Br\u00fbl\u00e9e",
+      "name": "Raspberry Cr\u00e8me Br\u00fbl\u00e9e",
       "dir": "cookbook/creme-brulee",
       "page": "cookbook/creme-brulee/index.html",
-      "card": "cookbook/creme-brulee/creme-brulee-card.png",
+      "card": "cookbook/creme-brulee/card-12.png",
       "bytes": {
-        "cookbook/creme-brulee/creme-brulee-card.png": 394908,
-        "cookbook/creme-brulee/index.html": 26049
+        "cookbook/creme-brulee/card-12.png": 433441,
+        "cookbook/creme-brulee/card-6.png": 417110,
+        "cookbook/creme-brulee/index.html": 23474
       },
       "added": "2026-11-02"
     },
@@ -102,13 +103,13 @@
     },
     {
       "slug": "rosemary-olive-oil-loaf",
-      "name": "Rosemary Olive Oil Loaf",
+      "name": "Rosemary Olive Oil Loaf \u2014 or 8 Dinner Rolls",
       "dir": "cookbook/rosemary-olive-oil-loaf",
       "page": "cookbook/rosemary-olive-oil-loaf/index.html",
       "card": "cookbook/rosemary-olive-oil-loaf/card.png",
       "bytes": {
-        "cookbook/rosemary-olive-oil-loaf/card.png": 364038,
-        "cookbook/rosemary-olive-oil-loaf/index.html": 18021
+        "cookbook/rosemary-olive-oil-loaf/card.png": 381846,
+        "cookbook/rosemary-olive-oil-loaf/index.html": 19698
       },
       "added": "2026-11-02"
     }
