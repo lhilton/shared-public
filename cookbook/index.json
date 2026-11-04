@@ -1,8 +1,20 @@
 {
-  "generated": "2026-11-02T20:09:44Z",
-  "commit": "12dd47a",
-  "count": 8,
+  "generated": "2026-11-04T21:31:18Z",
+  "commit": "70ee496",
+  "count": 9,
   "recipes": [
+    {
+      "slug": "chef-moes-pie",
+      "name": "Chef Moe's Pie with beans",
+      "dir": "cookbook/chef-moes-pie",
+      "page": "cookbook/chef-moes-pie/index.html",
+      "card": "cookbook/chef-moes-pie/card.png",
+      "bytes": {
+        "cookbook/chef-moes-pie/card.png": 338315,
+        "cookbook/chef-moes-pie/index.html": 17950
+      },
+      "added": "2026-11-04"
+    },
     {
       "slug": "brown-butter-banana-bread",
       "name": "Brown Butter Chocolate Chip Banana Bread",
@@ -95,8 +107,8 @@
       "page": "cookbook/rosemary-olive-oil-loaf/index.html",
       "card": "cookbook/rosemary-olive-oil-loaf/card.png",
       "bytes": {
-        "cookbook/rosemary-olive-oil-loaf/card.png": 357055,
-        "cookbook/rosemary-olive-oil-loaf/index.html": 17108
+        "cookbook/rosemary-olive-oil-loaf/card.png": 364038,
+        "cookbook/rosemary-olive-oil-loaf/index.html": 18021
       },
       "added": "2026-11-02"
     }
