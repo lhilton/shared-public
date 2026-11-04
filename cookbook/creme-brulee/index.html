@@ -3,32 +3,32 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Crème Brûlée — step by step</title>
+<title>Raspberry Crème Brûlée — Friendsgiving, step by step</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,900;1,9..144,500&family=Hanken+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
   :root{
-    --crumb:   #FFF6E3;   /* page background (cream) */
-    --crumb-2: #FFEBC2;   /* secondary surface */
-    --accent:  #F5A623;   /* yolk gold */
-    --accent-d:#8C4A0A;   /* caramel for small text on light */
-    --second:  #5E8C4E;   /* do/positive green */
-    --second-d:#43692F;
-    --warn:    #E85D26;   /* torch orange */
-    --warn-d:  #B23F12;
-    --ink:     #3F2606;
-    --ink-soft:#6A5742;
-    --line:    #EFD8A8;
+    --crumb:   #FDF4F1;   /* page background (soft blush) */
+    --crumb-2: #F7E4DF;   /* secondary surface */
+    --accent:  #BE3455;   /* raspberry jam */
+    --accent-d:#972A47;
+    --second:  #6E8C4E;   /* do/positive green */
+    --second-d:#4E6A34;
+    --warn:    #C0405B;
+    --warn-d:  #9C2F46;
+    --ink:     #3F2A28;
+    --ink-soft:#6E5450;
+    --line:    #EBD5CE;
     --maxw: 820px;
-    --shadow: 0 1px 2px rgba(63,38,6,.06), 0 14px 34px -18px rgba(63,38,6,.32);
+    --shadow: 0 1px 2px rgba(63,42,40,.06), 0 14px 34px -18px rgba(63,42,40,.32);
   }
   *{box-sizing:border-box}
   html{scroll-behavior:smooth}
   body{
     margin:0;
     background:
-      radial-gradient(120% 80% at 85% -10%, color-mix(in srgb, var(--accent) 20%, white) 0%, transparent 50%),
+      radial-gradient(120% 80% at 85% -10%, color-mix(in srgb, var(--accent) 16%, white) 0%, transparent 50%),
       var(--crumb);
     color:var(--ink);
     font-family:"Hanken Grotesk", system-ui, -apple-system, sans-serif;
@@ -36,57 +36,57 @@
   }
   .wrap{max-width:var(--maxw); margin:0 auto; padding:0 22px}
   h1,h2,h3{font-family:"Fraunces", Georgia, serif; font-weight:900; line-height:1.06; letter-spacing:-.01em}
-  a{color:var(--accent-d)}
+  a{color:var(--second-d)}
 
   .eyebrow{font-weight:700; text-transform:uppercase; letter-spacing:.22em; font-size:.74rem; color:var(--accent-d)}
 
-  /* sticky progress bar */
-  .progress{
-    position:sticky; top:0; z-index:50;
-    background:color-mix(in srgb, var(--crumb) 92%, transparent);
-    backdrop-filter:blur(6px);
-    border-bottom:1px solid var(--line);
-  }
-  .progress .inner{max-width:var(--maxw); margin:0 auto; padding:9px 22px; display:flex; align-items:center; gap:12px}
-  .progress .track{flex:1; height:14px; border-radius:999px; background:var(--crumb-2); border:1px solid var(--line); overflow:hidden}
-  .progress .fill{height:100%; width:0%; border-radius:999px; background:linear-gradient(90deg,#FFE9A8,var(--accent) 55%,var(--accent-d)); transition:width .45s cubic-bezier(.22,1,.36,1)}
-  .progress .lbl{font-size:.78rem; font-weight:800; color:var(--accent-d); white-space:nowrap; font-variant-numeric:tabular-nums}
-
-  /* hero */
   .hero{padding:52px 0 26px; text-align:center}
   .hero h1{font-size:clamp(2.1rem,5.6vw,3.3rem); margin:.1em 0 .14em}
-  .hero h1 .it{font-style:italic;font-weight:500;color:var(--accent-d)}
+  .hero h1 .it{font-style:italic;font-weight:500;color:var(--second-d)}
   .hero p.lede{font-size:1.1rem; color:var(--ink-soft); max-width:50ch; margin:6px auto 0}
   .pill-row{display:flex; gap:10px; justify-content:center; flex-wrap:wrap; margin-top:22px}
-  .pill{display:inline-flex; align-items:center; gap:8px; background:#FFFDF6; border:1px solid var(--line); border-radius:999px; padding:8px 15px; font-size:.86rem; font-weight:600; color:var(--ink-soft); box-shadow:var(--shadow)}
+  .pill{display:inline-flex; align-items:center; gap:8px; background:#FFFBF8; border:1px solid var(--line); border-radius:999px; padding:8px 15px; font-size:.86rem; font-weight:600; color:var(--ink-soft); box-shadow:var(--shadow)}
   .pill b{color:var(--ink)}
 
-  /* phone card embed */
-  .phonecard{background:#FFFDF6; border:1px solid var(--line); border-radius:18px;
-    box-shadow:var(--shadow); padding:24px; text-align:center; margin-top:18px}
-  .phonecard img{width:min(320px,80vw); border-radius:28px; box-shadow:0 18px 40px -18px rgba(63,38,6,.45)}
+  /* phone cards — two batches ship together */
+  .phonecards{display:grid; gap:18px; margin-top:18px}
+  @media(min-width:620px){.phonecards{grid-template-columns:1fr 1fr}}
+  .phonecard{background:#FFFBF8; border:1px solid var(--line); border-radius:18px;
+    box-shadow:var(--shadow); padding:24px; text-align:center}
+  .phonecard img{width:min(300px,80vw); border-radius:28px; box-shadow:0 18px 40px -18px rgba(63,42,40,.45)}
+  .phonecard h3{font-size:1.05rem; margin:0 0 10px}
   .phonecard p{font-size:.9rem; color:var(--ink-soft); margin:10px 0 0}
 
   section{padding:26px 0}
   .num-eyebrow{display:flex; align-items:center; gap:12px; margin:0 0 16px}
   .num-eyebrow .n{
     width:40px;height:40px;border-radius:12px;flex:none;display:grid;place-items:center;
-    font-family:"Fraunces",serif;font-weight:900;font-size:1.15rem;color:#FFF6E3;
-    background:var(--accent-d); box-shadow:0 8px 16px -8px color-mix(in srgb, var(--accent-d) 70%, transparent);
+    font-family:"Fraunces",serif;font-weight:900;font-size:1.15rem;color:#fff;
+    background:var(--second); box-shadow:0 8px 16px -8px color-mix(in srgb, var(--second-d) 70%, transparent);
   }
   .num-eyebrow h2{font-size:clamp(1.5rem,3.4vw,2.1rem); margin:0}
-  .panel{background:#FFFDF6; border:1px solid var(--line); border-radius:18px; box-shadow:var(--shadow); padding:24px}
+  .panel{background:#FFFBF8; border:1px solid var(--line); border-radius:18px; box-shadow:var(--shadow); padding:24px}
 
-  /* LAB chips */
+  .about{
+    background:linear-gradient(180deg,var(--crumb-2),#FFFBF8);
+    border:1px solid var(--line); border-left:5px solid var(--accent);
+    border-radius:16px; box-shadow:var(--shadow); padding:22px 24px; margin-top:8px;
+  }
+  .about h2{font-size:1.35rem; margin:0 0 6px}
+  .about ul{margin:12px 0 0; padding:0; list-style:none; display:grid; gap:10px}
+  .about li{position:relative; padding-left:26px; font-size:.97rem}
+  .about li::before{content:"🍓"; position:absolute; left:0; top:0; font-size:.9rem}
+  .about b{color:var(--accent-d)}
+
   .lab{display:inline-block; font-weight:800; font-size:.7rem; letter-spacing:.12em; text-transform:uppercase; padding:2px 9px; border-radius:6px; margin-right:8px; vertical-align:2px}
   .lab.do{background:var(--second); color:#fff}
   .lab.note{background:var(--crumb-2); color:var(--accent-d); border:1px solid var(--line)}
   .lab.warn{background:var(--warn); color:#fff}
-  .lab.see{background:#FDF1DA; color:var(--ink); border:1px solid var(--line)}
+  .lab.see{background:#EAF0E0; color:var(--ink); border:1px solid #CFDDBC}
 
   .two{display:grid; gap:18px}
   @media(min-width:620px){.two{grid-template-columns:1fr 1fr}}
-  .card{background:#FFFDF6; border:1px solid var(--line); border-radius:16px; box-shadow:var(--shadow); padding:20px 22px}
+  .card{background:#FFFBF8; border:1px solid var(--line); border-radius:16px; box-shadow:var(--shadow); padding:20px 22px}
   .card h3{font-size:1.18rem; margin:0 0 4px}
   .card .sub{font-size:.84rem; color:var(--ink-soft); margin:0 0 14px}
   ul.list{list-style:none; margin:0; padding:0}
@@ -94,7 +94,7 @@
   ul.list li:last-child{border-bottom:0}
   ul.list .amt{font-weight:700; white-space:nowrap; font-variant-numeric:tabular-nums; color:var(--accent-d); text-align:right}
   ul.list .amt .gram{display:block; font-weight:800; font-size:1rem; color:var(--second-d)}
-  .weightnote{background:#EDF3E4; border:1px solid #D2E0C2; border-radius:10px; padding:11px 13px; font-size:.9rem; color:var(--ink-soft); margin:0 0 14px}
+  .weightnote{background:#EEF3E6; border:1px solid #D2E0C2; border-radius:10px; padding:11px 13px; font-size:.9rem; color:var(--ink-soft); margin:0 0 14px}
   .weightnote b{color:var(--second-d)}
   .variant{background:var(--crumb-2); border:1px dashed var(--accent); border-radius:10px; padding:12px 14px; font-size:.9rem; margin-top:14px}
   .variant b{color:var(--accent-d)}
@@ -103,63 +103,41 @@
   ul.tools li:last-child{border-bottom:0}
   ul.tools li::before{content:"✓"; position:absolute; left:0; top:7px; color:var(--second-d); font-weight:800}
 
-  /* tappable steps */
   ol.steps{list-style:none; counter-reset:s; margin:0; padding:0; display:grid; gap:16px}
   ol.steps > li{
     counter-increment:s; position:relative; padding:18px 20px 18px 64px;
-    background:#FFFDF6; border:1px solid var(--line); border-radius:14px; box-shadow:var(--shadow);
-    transition:border-color .2s, background .2s;
+    background:#FFFBF8; border:1px solid var(--line); border-radius:14px; box-shadow:var(--shadow);
   }
   ol.steps > li::before{
     content:counter(s); position:absolute; left:16px; top:16px;
     width:34px;height:34px;border-radius:50%; display:grid; place-items:center;
-    font-family:"Fraunces",serif; font-weight:900; font-size:1rem; color:#FFF6E3;
+    font-family:"Fraunces",serif; font-weight:900; font-size:1rem; color:#fff;
     background:var(--accent); box-shadow:0 5px 12px -5px color-mix(in srgb, var(--accent-d) 80%, transparent);
-    transition:background .2s;
   }
-  ol.steps > li.done{border-color:var(--accent); background:#FFFAEB}
-  ol.steps > li.done::before{background:var(--accent-d); content:"✓"}
-  ol.steps > li.done .body{opacity:.66}
   ol.steps > li h4{margin:0 0 6px; font-family:"Hanken Grotesk",sans-serif; font-weight:800; font-size:1.04rem}
-  ol.steps > li .body p{margin:0 0 8px}
-  ol.steps > li .body p:last-child{margin-bottom:0}
-  .check{position:absolute; right:14px; top:14px; width:auto; border:1.5px solid var(--line); background:var(--crumb-2); color:var(--accent-d);
-    font:800 .68rem/1 "Hanken Grotesk",sans-serif; letter-spacing:.06em; text-transform:uppercase;
-    padding:5px 11px; border-radius:999px; cursor:pointer}
-  ol.steps > li.done .check{background:var(--accent-d); color:#FFF6E3; border-color:var(--accent-d)}
+  ol.steps > li p{margin:0 0 8px}
+  ol.steps > li p:last-child{margin-bottom:0}
   .expect{font-size:.92rem; color:var(--ink-soft); background:#F3F7EC; border:1px solid #D9E7C9; border-radius:9px; padding:9px 12px; margin-top:8px}
   .expect b{color:var(--second-d)}
-  .stop{font-size:.93rem; background:linear-gradient(90deg,rgba(232,93,38,.10),transparent 70%); border-left:4px solid var(--warn); border-radius:8px; padding:9px 12px; margin-top:8px}
+  .stop{font-size:.93rem; background:linear-gradient(90deg,rgba(192,64,91,.09),transparent 70%); border-left:4px solid var(--warn); border-radius:8px; padding:9px 12px; margin-top:8px}
   .stop b{color:var(--warn-d)}
-  .flag{font-size:.93rem; background:linear-gradient(90deg,rgba(245,166,35,.20),transparent 75%); border-left:4px solid var(--accent); border-radius:8px; padding:9px 12px; margin-top:8px}
+  .flag{font-size:.93rem; background:linear-gradient(90deg,rgba(190,52,85,.18),transparent 75%); border-left:4px solid var(--accent); border-radius:8px; padding:9px 12px; margin-top:8px}
   .flag b{color:var(--accent-d)}
 
   code{background:var(--crumb-2); border:1px solid var(--line); border-radius:6px; padding:1px 7px; font-size:.92em; font-weight:600}
   b.key{color:var(--ink)}
 
-  .chip{display:inline-flex;align-items:center;gap:6px;background:#FFFDF6;border:1px solid var(--line);border-radius:999px;padding:7px 13px;font-size:.86rem;font-weight:600}
-  .chip b{color:var(--accent-d)}
+  .settings{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}
+  .chip{display:inline-flex;align-items:center;gap:6px;background:#fff;border:1px solid var(--line);border-radius:999px;padding:7px 13px;font-size:.86rem;font-weight:600}
+  .chip b{color:var(--second-d)}
 
-  /* timers */
-  .timer{display:flex; align-items:center; gap:10px; flex-wrap:wrap; margin-top:12px;
-    background:var(--crumb-2); border:1px solid var(--accent); border-radius:12px; padding:10px 14px}
-  .t-disp{font-weight:800; font-size:1.35rem; color:var(--accent-d); font-variant-numeric:tabular-nums; min-width:92px}
-  .t-btn{border:1.5px solid var(--accent-d); background:#FFFDF6; color:var(--accent-d); font-weight:800; font-size:.8rem;
-    padding:6px 13px; border-radius:999px; cursor:pointer; transition:transform .1s, background .15s}
-  .t-btn:hover{background:var(--crumb-2)}
-  .t-btn:active{transform:scale(.96)}
-  .t-btn.running{background:var(--accent-d); color:#FFF6E3}
-  .t-tag{font-size:.78rem; font-weight:700; color:var(--ink-soft)}
-
-  /* storage panel */
   .storage{display:grid; gap:14px}
   @media(min-width:620px){.storage{grid-template-columns:1fr 1fr}}
-  .storage .it{background:#FFFDF6; border:1px solid var(--line); border-radius:12px; padding:15px}
+  .storage .it{background:#FFFBF8; border:1px solid var(--line); border-radius:12px; padding:15px}
   .storage .it h4{margin:0 0 5px; font-family:"Fraunces",serif; font-size:1.05rem}
   .storage .it p{margin:0; font-size:.93rem; color:var(--ink-soft)}
 
-  /* troubleshooting fix-grid */
-  .fix{display:grid; gap:12px}
+  .fix{display:grid;gap:12px}
   @media(min-width:620px){.fix{grid-template-columns:1fr 1fr}}
   .fix .it{background:var(--crumb-2);border:1px solid var(--line);border-radius:12px;padding:15px}
   .fix .it h4{margin:0 0 5px;font-family:"Fraunces",serif;font-size:1.05rem}
@@ -174,29 +152,45 @@
 </head>
 <body>
 
-<div class="progress" id="progress">
-  <div class="inner">
-    <div class="track"><div class="fill" id="fill"></div></div>
-    <div class="lbl" id="plabel">0 / 10 done</div>
-  </div>
-</div>
-
 <header class="hero">
   <div class="wrap">
-    <span class="eyebrow">Lee's own · four 6-oz ramekins</span>
-    <h1 data-name="Crème Brûlée">Crème <span class="it">Brûlée</span></h1>
-    <p class="lede">Silky vanilla custard under a shatter-crisp caramel lid. Four ramekins, about 5 oz of custard each. About 20 minutes of active work; the oven and fridge do the rest.</p>
+    <span class="eyebrow">Lee's own · Friendsgiving 2026</span>
+    <h1>Raspberry <span class="it">Crème Brûlée</span></h1>
+    <p class="lede">Vanilla custard with a raspberry kick under a shatter-crisp caramel lid. Six 6-oz ramekins, about 4 oz of custard each. Bake Friday, torch Saturday.</p>
     <div class="pill-row">
-      <span class="pill">🍮 <span>Serves <b>4</b></span></span>
-      <span class="pill">🔥 <span>Bake <b>30–35 min</b> at 325°F</span></span>
+      <span class="pill">🍮 <span>Serves <b>6</b></span></span>
+      <span class="pill">🔥 <span>Bake <b>25–30 min</b> at 325°F</span></span>
       <span class="pill">❄ <span>Chill <b>4 hr +</b></span></span>
+      <span class="pill">🗓 <span>Split over <b>Friday → Saturday</b></span></span>
     </div>
-    <div class="phonecard">
-      <a href="creme-brulee-card.png"><img src="creme-brulee-card.png" alt="Phone recipe card"></a>
-      <p>📱 For your phone — tap to open the full-size card, then save it to Photos.</p>
+    <div class="phonecards">
+      <div class="phonecard">
+        <h3>📱 Card for 6 ramekins</h3>
+        <a href="card-6.png"><img src="card-6.png" alt="Phone recipe card — 6 ramekins"></a>
+        <p>Tap to open the full-size card, then save it to Photos.</p>
+      </div>
+      <div class="phonecard">
+        <h3>📱 Card for 12 ramekins</h3>
+        <a href="card-12.png"><img src="card-12.png" alt="Phone recipe card — 12 ramekins"></a>
+        <p>Doubles everything; bake runs 30–35 min.</p>
+      </div>
     </div>
   </div>
 </header>
+
+<section>
+  <div class="wrap">
+    <div class="about">
+      <h2>What's different in this version</h2>
+      <ul>
+        <li><b>Raspberry extract in the custard, vanilla alongside it.</b> Half-teaspoon per 720 g cream. Extracts go bitter fast, so the vanilla carries and the raspberry accents. Both go in off heat — heat dulls them.</li>
+        <li><b>4 oz per 6-oz ramekin</b> (about two-thirds full). Shallower custard bakes faster, sets more reliably, and gives you more caramel lid per bite.</li>
+        <li><b>Superfine sugar for the lid, 1 tsp per ramekin.</b> Blitz granulated in a blender for 30 seconds. Superfine melts at lower heat, so the custard underneath stays cold. Never powdered sugar — its cornstarch goes sticky instead of crackly.</li>
+        <li><b>Make-ahead split:</b> bake and chill Friday, torch Saturday right before serving. The lid softens within an hour of torching, so it's always a day-of job.</li>
+      </ul>
+    </div>
+  </div>
+</section>
 
 <section>
   <div class="wrap">
@@ -204,27 +198,30 @@
     <div class="two">
       <div class="card">
         <h3>Ingredients</h3>
-        <p class="sub">For four 6-oz ramekins (~5 oz custard each). Grams lead; volume in the small line.</p>
+        <p class="sub">For six 6-oz ramekins (~4 oz custard each). Grams lead; volume in the small line.</p>
         <p class="weightnote"><b>Weigh if you can.</b> Set the bowl on the scale, tare between ingredients, go by grams.</p>
         <ul class="list">
-          <li><span>Heavy cream</span><span class="amt"><span class="gram">480 g</span>2 cups / 480 ml</span></li>
-          <li><span>Large egg yolks (5)</span><span class="amt"><span class="gram">~85 g</span>save the whites</span></li>
-          <li><span>Granulated sugar — custard</span><span class="amt"><span class="gram">67 g</span>⅓ cup</span></li>
-          <li><span>Vanilla extract</span><span class="amt"><span class="gram">1 tsp</span>5 ml · or 1 bean</span></li>
+          <li><span>Heavy cream</span><span class="amt"><span class="gram">720 g</span>3 cups</span></li>
+          <li><span>Large egg yolks (7)</span><span class="amt"><span class="gram">~126 g</span>save the whites</span></li>
+          <li><span>Granulated sugar — custard</span><span class="amt"><span class="gram">100 g</span>½ cup</span></li>
+          <li><span>Vanilla extract</span><span class="amt"><span class="gram">¾ tsp</span>4 ml</span></li>
+          <li><span>Raspberry extract</span><span class="amt"><span class="gram">½ tsp</span>2.5 ml</span></li>
           <li><span>Fine salt</span><span class="amt"><span class="gram">⅛ tsp</span>too small to weigh</span></li>
-          <li><span>Granulated sugar — topping</span><span class="amt"><span class="gram">8 tsp</span>~33 g · 2 tsp per ramekin</span></li>
+          <li><span>Fresh raspberries — base + garnish</span><span class="amt"><span class="gram">18 berries</span>3 per ramekin + a pinch of sugar</span></li>
+          <li><span>Superfine sugar — lid</span><span class="amt"><span class="gram">6 tsp</span>~25 g · 1 tsp per ramekin</span></li>
         </ul>
-        <div class="variant"><b>Cream check.</b> "Heavy cream" and "heavy whipping cream" are the same product, 36%+ fat — either works. Half-and-half or light cream won't set.</div>
+        <div class="variant"><b>Cooking for 12?</b> Double everything: 1440 g cream, 14 yolks, 200 g sugar, 1½ tsp vanilla, 1 tsp raspberry, ¼ tsp salt, 36 berries, 12 tsp superfine. Bake runs 30–35 min instead. There's a card for it at the top of this page.</div>
       </div>
       <div class="card">
         <h3>Equipment</h3>
         <ul class="tools">
-          <li>4 × 6-oz ramekins</li>
+          <li>6 × 6-oz ramekins (12 for the big batch)</li>
           <li>Roasting pan or deep baking dish</li>
           <li>Fine-mesh sieve</li>
           <li>Whisk + medium bowl</li>
           <li>Medium saucepan</li>
           <li>Kettle (about 8 cups / 2 L water)</li>
+          <li>Blender or food processor (for superfine sugar)</li>
           <li>Kitchen torch, or the broiler</li>
         </ul>
       </div>
@@ -234,24 +231,22 @@
 
 <section>
   <div class="wrap">
-    <div class="num-eyebrow"><span class="n">2</span><h2>Get ready</h2></div>
+    <div class="num-eyebrow"><span class="n">2</span><h2>Get ready — Friday</h2></div>
     <ol class="steps">
       <li>
-        <button class="check" type="button" aria-pressed="false">Done</button>
         <h4>Heat the oven, stage the pan</h4>
-        <div class="body">
-          <p>Preheat the oven to <code>325°F</code>, rack in the middle position. Set the 4 ramekins in a roasting pan, spaced so they don't touch. Fill a kettle with about 8 cups (2 L) of water and leave it on the stove — don't boil it yet.</p>
-          <p class="expect"><b>Why the water:</b> the custards bake sitting in hot water, which shields them from direct oven heat so they set silky instead of curdling. The water surrounds the ramekins; it never touches the custard.</p>
-        </div>
+        <p>Preheat to <code>325°F</code>, rack in the middle. Set the 6 ramekins in a roasting pan, spaced so they don't touch. Fill a kettle with about 8 cups (2 L) of water and leave it on the stove — don't boil it yet.</p>
+        <p class="expect"><b>Why the water:</b> the custards bake sitting in hot water, which shields them from direct oven heat so they set silky instead of curdling. The water surrounds the ramekins; it never touches the custard.</p>
       </li>
       <li>
-        <button class="check" type="button" aria-pressed="false">Done</button>
         <h4>Warm the cream</h4>
-        <div class="body">
-          <p>Pour <code>480 g</code> cream into a medium saucepan over medium heat. Ready in about <b class="key">5 minutes</b>, when steam rises and tiny bubbles ring the edge. Turn off the heat, leave the pan where it is.</p>
-          <p class="stop"><b>Stop:</b> don't let the cream reach a full boil — boiled cream scorching and forming a skin is how a grainy custard starts.</p>
-          <p class="flag"><b>Vanilla bean?</b> Add the scraped seeds and pod now, steep <b class="key">10 minutes</b> off heat, pull the pod before tempering.</p>
-        </div>
+        <p>Pour <code>720 g</code> cream into a medium saucepan over medium heat. Ready in about <b class="key">5 minutes</b>, when steam rises and tiny bubbles ring the edge. Turn off the heat, leave the pan where it is.</p>
+        <p class="stop"><b>Stop:</b> don't let the cream reach a full boil — boiled cream scorching and forming a skin is how a grainy custard starts.</p>
+      </li>
+      <li>
+        <h4>Blitz your superfine sugar (while the cream warms)</h4>
+        <p>Pulse about <code>50 g</code> (¼ cup) granulated sugar in a blender or food processor for <b class="key">30 seconds</b> — fine but not powdered. Set aside in a small bowl for Saturday. You need 6 teaspoons; the extra is insurance.</p>
+        <p class="expect"><b>Why bother:</b> superfine melts at a lower temperature, so the lid caramelizes before the cold custard underneath warms up. That's the thin-shell trick.</p>
       </li>
     </ol>
   </div>
@@ -262,28 +257,24 @@
     <div class="num-eyebrow"><span class="n">3</span><h2>Make the custard</h2></div>
     <ol class="steps">
       <li>
-        <button class="check" type="button" aria-pressed="false">Done</button>
         <h4>Whisk the yolks</h4>
-        <div class="body">
-          <p>Whisk <code>5 yolks (~85 g)</code>, <code>67 g</code> sugar, and <code>⅛ tsp</code> salt in a medium bowl for about <b class="key">1 minute</b>, until pale and slightly thick.</p>
-          <p class="flag"><b>First time separating eggs?</b> Crack one at a time over a small bowl, pass the yolk between shell halves, let the white drop. Cold eggs separate more cleanly. Save the whites — they keep 4 days.</p>
-        </div>
+        <p>Whisk <code>7 yolks (~126 g)</code>, <code>100 g</code> sugar, and <code>⅛ tsp</code> salt in a medium bowl for about <b class="key">1 minute</b>, until pale and slightly thick.</p>
+        <p class="flag"><b>First time separating eggs?</b> Crack one at a time over a small bowl, pass the yolk between shell halves, let the white drop. Cold eggs separate more cleanly. Save the whites — they keep 4 days.</p>
       </li>
       <li>
-        <button class="check" type="button" aria-pressed="false">Done</button>
         <h4>Temper, slowly</h4>
-        <div class="body">
-          <p>Whisk the yolks nonstop with one hand. Pour the warm cream in a thin, slow stream with the other — take a full <b class="key">30–60 seconds</b> to add all of it. Stir in 1 tsp vanilla extract.</p>
-          <p class="stop"><b>Stop:</b> cream poured in fast cooks the yolks into sweet scrambled eggs. Thin stream, constant whisk.</p>
-        </div>
+        <p>Whisk the yolks nonstop with one hand. Pour the warm cream in a thin, slow stream with the other — take a full <b class="key">30–60 seconds</b> to add all of it.</p>
+        <p class="stop"><b>Stop:</b> cream poured in fast cooks the yolks into sweet scrambled eggs. Thin stream, constant whisk.</p>
       </li>
       <li>
-        <button class="check" type="button" aria-pressed="false">Done</button>
-        <h4>Strain it smooth</h4>
-        <div class="body">
-          <p>Pour the custard through a fine-mesh sieve into a spouted pitcher. The sieve catches stray egg bits and pops bubbles. Skim any leftover surface foam with a spoon.</p>
-          <p class="flag"><b>No sieve?</b> Any fine strainer works. Skipping the strain entirely still tastes good, just less silky.</p>
-        </div>
+        <h4>Extracts, off heat</h4>
+        <p>Stir in <code>¾ tsp</code> vanilla and <code>½ tsp</code> raspberry extract now, after the cream is in — not in the saucepan. Heat dulls both and can make the raspberry taste sharper.</p>
+        <p class="stop"><b>Stop:</b> resist adding more raspberry to make it stronger. Past ½ tsp per 720 g cream it reads as candy, not berry. Taste the mix; it should smell faintly of raspberry.</p>
+      </li>
+      <li>
+        <h4>Berries in, strain over</h4>
+        <p>Toss 18 raspberries in a pinch of sugar. Put <b class="key">3 in the bottom of each ramekin</b>. Pour the custard through a fine-mesh sieve into a spouted pitcher, then fill each ramekin to about <b class="key">two-thirds full — 4 oz / ~120 g each</b>. Skim any surface foam.</p>
+        <p class="expect"><b>What to expect:</b> a few berries float at first; most settle as they bake. The sugaring keeps their juice from bleeding into the custard.</p>
       </li>
     </ol>
   </div>
@@ -294,27 +285,15 @@
     <div class="num-eyebrow"><span class="n">4</span><h2>Water-bath bake</h2></div>
     <ol class="steps">
       <li>
-        <button class="check" type="button" aria-pressed="false">Done</button>
         <h4>Boil, fill, flood — at the oven</h4>
-        <div class="body">
-          <p>Boil the kettle. Pour the custard evenly into the 4 ramekins, stopping <b class="key">¼ inch below each rim</b> — about 5 oz each. Pull the middle rack halfway out, set the pan on it, then pour the boiling water into a corner of the pan until it reaches halfway up the ramekins. Slide the rack in, close the door.</p>
-          <p class="stop"><b>Stop:</b> never pour water over or into the ramekins — water in the custard ruins the texture. Filling at the oven also means you never carry a full pan of boiling water across the kitchen.</p>
-        </div>
+        <p>Boil the kettle. Pull the middle rack halfway out, set the pan on it, then pour the boiling water into a corner of the pan until it reaches <b class="key">halfway up the ramekins</b>. Slide the rack in, close the door.</p>
+        <p class="stop"><b>Stop:</b> never pour water over or into the ramekins — water in the custard ruins the texture. Filling at the oven also means you never carry a full pan of boiling water across the kitchen.</p>
       </li>
       <li>
-        <button class="check" type="button" aria-pressed="false">Done</button>
         <h4>Bake, then jiggle-test</h4>
-        <div class="body">
-          <p>Bake <b class="key">30–35 minutes</b> at <code>325°F</code>. At <b class="key">30 minutes</b>, nudge the pan with a mitted hand: done = edges hold still, only the centers wobble like set Jell-O (about <code>170°F</code> internal, if you use a thermometer).</p>
-          <p class="stop"><b>Stop:</b> a center that doesn't move at all is overbaked — that's grainy custard. Start checking at 30 minutes, not 35.</p>
-          <p class="flag"><b>Whole surface rippling?</b> Bake 5 more minutes, test again.</p>
-          <div class="timer" data-seconds="1920">
-            <span class="t-disp">32:00</span>
-            <button class="t-btn t-start" type="button">▶ Start</button>
-            <button class="t-btn t-reset" type="button">↺ Reset</button>
-            <span class="t-tag">bake timer</span>
-          </div>
-        </div>
+        <p>Bake <b class="key">25–30 minutes</b> at <code>325°F</code> — the shallower 4-oz fill runs faster than classic brûlée. At <b class="key">25 minutes</b>, nudge the pan with a mitted hand: done = edges hold still, only the centers wobble like set Jell-O (about <code>170°F</code> internal, if you use a thermometer).</p>
+        <p class="stop"><b>Stop:</b> a center that doesn't move at all is overbaked — that's grainy custard. Start checking at 25 minutes, not 30.</p>
+        <p class="flag"><b>Whole surface rippling?</b> Bake 5 more minutes, test again.</p>
       </li>
     </ol>
   </div>
@@ -322,21 +301,12 @@
 
 <section>
   <div class="wrap">
-    <div class="num-eyebrow"><span class="n">5</span><h2>Chill</h2></div>
+    <div class="num-eyebrow"><span class="n">5</span><h2>Chill overnight</h2></div>
     <ol class="steps">
       <li>
-        <button class="check" type="button" aria-pressed="false">Done</button>
-        <h4>Cool 30 minutes, then chill 4 hours</h4>
-        <div class="body">
-          <p>Pull the whole pan out and set it on the stovetop. Lift each ramekin out of the water — tongs plus a thin spatula, or grip with a folded dish towel — onto a wire rack. Cool <b class="key">30 minutes</b>, then refrigerate uncovered for at least <b class="key">4 hours</b>.</p>
-          <p class="flag"><b>Keeping them past a day?</b> Cover with plastic wrap only once they're fully cold — covering warm custard traps drippy condensation. They hold 3 days in the fridge.</p>
-          <div class="timer" data-seconds="14400">
-            <span class="t-disp">4:00:00</span>
-            <button class="t-btn t-start" type="button">▶ Start</button>
-            <button class="t-btn t-reset" type="button">↺ Reset</button>
-            <span class="t-tag">chill timer</span>
-          </div>
-        </div>
+        <h4>Cool 30 minutes, then into the fridge</h4>
+        <p>Pull the whole pan out and set it on the stovetop. Lift each ramekin out of the water — tongs plus a thin spatula, or grip with a folded dish towel — onto a wire rack. Cool <b class="key">30 minutes</b>, then refrigerate uncovered for at least <b class="key">4 hours</b>. Overnight is ideal for a Saturday service.</p>
+        <p class="flag"><b>Keeping them past a day?</b> Cover with plastic wrap only once they're fully cold — covering warm custard traps drippy condensation. They hold 2 days in the fridge, which is exactly your Friday-to-Saturday window.</p>
       </li>
     </ol>
   </div>
@@ -344,30 +314,22 @@
 
 <section>
   <div class="wrap">
-    <div class="num-eyebrow"><span class="n">6</span><h2>Brûlée and crack</h2></div>
+    <div class="num-eyebrow"><span class="n">6</span><h2>Brûlée day — Saturday</h2></div>
     <ol class="steps">
       <li>
-        <button class="check" type="button" aria-pressed="false">Done</button>
-        <h4>Blot, sugar, torch</h4>
-        <div class="body">
-          <p>Blot the custard surface dry with the corner of a paper towel — sugar won't caramelize evenly on a wet surface. Sprinkle <code>2 tsp sugar</code> over each custard, tilt to coat edge to edge, tap out the excess.</p>
-          <p class="expect"><b>Torch:</b> hold the flame tip <b class="key">2–3 inches</b> above the sugar and move in slow, steady sweeps. Sugar goes wet → bubbling → amber. Stop at copper-penny amber.</p>
-          <p class="stop"><b>Stop:</b> keep the flame moving the entire time. A flame parked in one spot turns that patch black and bitter before the rest even melts.</p>
-        </div>
+        <h4>Blot, sugar thin, dump the excess</h4>
+        <p>Blot the custard surface dry with the corner of a paper towel — sugar won't caramelize evenly on a wet surface. Sprinkle <b class="key">1 tsp superfine sugar</b> over each custard — no more. Tilt and rotate to coat edge to edge, then tap out the excess.</p>
+        <p class="stop"><b>Stop:</b> too much sugar is the number-one cause of thick, patchy shells. A thin shell cracks clean; a thick one piles up and goes bitter at the edges.</p>
       </li>
       <li>
-        <button class="check" type="button" aria-pressed="false">Done</button>
-        <h4>Wait, then crack</h4>
-        <div class="body">
-          <p>Wait <b class="key">1–2 minutes</b>. The caramel is ready when the back of a spoon taps against it like glass. Tap, listen, eat immediately. That sound is the whole point.</p>
-          <p class="flag"><b>No torch?</b> Freeze the custards 15 minutes first so the broiler doesn't warm them through, then broil on the top rack <b class="key">2–4 minutes</b> with the door cracked open. Watch the entire time — it turns fast.</p>
-          <div class="timer" data-seconds="120">
-            <span class="t-disp">2:00</span>
-            <button class="t-btn t-start" type="button">▶ Start</button>
-            <button class="t-btn t-reset" type="button">↺ Reset</button>
-            <span class="t-tag">harden timer</span>
-          </div>
-        </div>
+        <h4>Torch to copper amber</h4>
+        <p>Hold the flame tip <b class="key">2–3 inches</b> above the sugar and move in slow, steady sweeps. Sugar goes wet → bubbling → amber. Stop at <b class="key">copper penny amber</b>, one shade lighter than you want — it keeps darkening for a few seconds after the flame moves on.</p>
+        <p class="stop"><b>Stop:</b> keep the flame moving the entire time. A flame parked in one spot turns that patch black and bitter before the rest even melts.</p>
+      </li>
+      <li>
+        <h4>Wait, garnish, crack</h4>
+        <p>Wait <b class="key">1–2 minutes</b>. Dab a fresh raspberry dry with a paper towel and set one on each custard — after torching, so the juice never weeps onto the crack. The caramel is ready when the back of a spoon taps against it like glass. Tap, listen, serve.</p>
+        <p class="flag"><b>No torch?</b> Freeze the custards 15 minutes first so the broiler doesn't warm them through, then broil on the top rack <b class="key">2–4 minutes</b> with the door cracked open. Watch the entire time — it turns fast.</p>
       </li>
     </ol>
   </div>
@@ -377,8 +339,8 @@
   <div class="wrap">
     <div class="num-eyebrow"><span class="n" style="background:var(--accent-d)">7</span><h2>Storage</h2></div>
     <div class="storage">
-      <div class="it"><h4>Chilled custard</h4><p>3 days in the fridge, uncovered until fully cold, then covered. The caramel lid starts softening after about an hour — brûlée only right before serving, never in advance.</p></div>
-      <div class="it"><h4>Five lonely egg whites</h4><p>They keep 4 days in the fridge. Meringues, financiers, or tomorrow's egg-white omelet all count as responsible ownership.</p></div>
+      <div class="it"><h4>Chilled custard</h4><p>2 days in the fridge, uncovered until fully cold, then covered. The caramel lid starts softening after about an hour — brûlée only right before serving, never in advance.</p></div>
+      <div class="it"><h4>Seven lonely egg whites</h4><p>They keep 4 days in the fridge. Meringues, financiers, or a Saturday-morning egg-white omelet all count as responsible ownership.</p></div>
     </div>
   </div>
 </section>
@@ -387,12 +349,12 @@
   <div class="wrap">
     <div class="num-eyebrow"><span class="n" style="background:var(--warn)">?</span><h2>If something went wrong</h2></div>
     <div class="fix">
-      <div class="it"><h4>Grainy texture</h4><p>Overbaked. Next time start checking at 30 minutes and pull them while the centers still wobble.</p></div>
+      <div class="it"><h4>Thick, patchy shell</h4><p>Too much sugar went on. Next time 1 tsp per ramekin, tilt to coat, dump the excess off before torching.</p></div>
+      <div class="it"><h4>Lid went sticky, not snappy</h4><p>Powdered sugar or a torched-ahead lid. Superfine sugar only, and torch within the hour before serving.</p></div>
+      <div class="it"><h4>Black bitter patches</h4><p>The flame parked in one spot. Keep it sweeping, 2–3 inches above, and stop at copper amber — carryover heat does the last shade.</p></div>
+      <div class="it"><h4>Raspberry tastes like candy</h4><p>Too much extract. Cap it at ½ tsp per 720 g cream and let the vanilla do the rounding. Next batch, hold it at ⅜ tsp if your extract is strong.</p></div>
+      <div class="it"><h4>Grainy custard</h4><p>Overbaked. With the shallower 4-oz fill, start the jiggle test at 25 minutes and pull while the centers still wobble.</p></div>
       <div class="it"><h4>Sweet scrambled yolks in the bowl</h4><p>The hot cream went in too fast. Pour in a thin stream over a full 30–60 seconds, whisking nonstop.</p></div>
-      <div class="it"><h4>Watery, thin custard</h4><p>Water got into a ramekin during the bath. Pour the water into the pan's corner, never over the ramekins.</p></div>
-      <div class="it"><h4>Bitter black patches</h4><p>The torch flame parked in one spot. Keep it sweeping, 2–3 inches above, and stop at copper-amber.</p></div>
-      <div class="it"><h4>Lid went soft in the fridge</h4><p>The caramel was torched too early. Torch right before serving only — the lid softens after about an hour.</p></div>
-      <div class="it"><h4>Whole surface rippling at 35 min</h4><p>Underbaked. Give it 5 more minutes, then run the jiggle test again.</p></div>
     </div>
   </div>
 </section>
@@ -400,67 +362,9 @@
 <footer>
   <div class="wrap">
     <div class="rule"></div>
-    <p style="max-width:74ch"><b>Source:</b> Lee's own recipe, scaled for four 6-oz ramekins at about 5 oz of custard each. Weights computed from Lee's measured ingredient list; the broiler fallback and storage notes carried over from the original.</p>
+    <p style="max-width:74ch"><b>Source:</b> Lee's own crème brûlée, rebuilt for Friendsgiving 2026 — raspberry extract and vanilla in the custard, 4 oz fills in 6-oz ramekins, superfine-sugar lids at 1 tsp per ramekin, and a Friday-bake / Saturday-torch schedule. Quantities computed by weight and scaled from Lee's measured base recipe.</p>
   </div>
 </footer>
 
-<script>
-  /* ---------- step check-off + progress ---------- */
-  var steps = Array.prototype.slice.call(document.querySelectorAll('ol.steps > li'));
-  var fill = document.getElementById('fill');
-  var plabel = document.getElementById('plabel');
-  function updateProgress(){
-    var done = steps.filter(function(s){ return s.classList.contains('done'); }).length;
-    fill.style.width = (done / steps.length * 100) + '%';
-    plabel.textContent = done + ' / ' + steps.length + ' done';
-  }
-  steps.forEach(function(s){
-    var btn = s.querySelector('.check');
-    btn.addEventListener('click', function(){
-      var on = s.classList.toggle('done');
-      btn.setAttribute('aria-pressed', on);
-      btn.textContent = on ? '✓ Done' : 'Done';
-      updateProgress();
-    });
-  });
-
-  /* ---------- timers ---------- */
-  function fmt(s){
-    var h = Math.floor(s / 3600);
-    var m = Math.floor((s % 3600) / 60);
-    var sec = s % 60;
-    if (h > 0) return h + ':' + String(m).padStart(2,'0') + ':' + String(sec).padStart(2,'0');
-    return m + ':' + String(sec).padStart(2,'0');
-  }
-  document.querySelectorAll('.timer').forEach(function(t){
-    var total = parseInt(t.dataset.seconds, 10);
-    var remain = total;
-    var id = null;
-    var disp = t.querySelector('.t-disp');
-    var startBtn = t.querySelector('.t-start');
-    var resetBtn = t.querySelector('.t-reset');
-    function render(){ disp.textContent = fmt(remain); }
-    function stop(){
-      if (id){ clearInterval(id); id = null; }
-      startBtn.textContent = '▶ Start';
-      startBtn.classList.remove('running');
-    }
-    function tick(){
-      remain--;
-      render();
-      if (remain <= 0){ stop(); disp.textContent = '⏰ ' + fmt(total); }
-    }
-    startBtn.addEventListener('click', function(){
-      if (id){ stop(); return; }
-      if (remain <= 0) remain = total;
-      render();
-      id = setInterval(tick, 1000);
-      startBtn.textContent = '⏸ Pause';
-      startBtn.classList.add('running');
-    });
-    resetBtn.addEventListener('click', function(){ stop(); remain = total; render(); });
-    render();
-  });
-</script>
 </body>
 </html>
